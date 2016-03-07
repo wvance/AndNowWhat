@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Opportunity:</strong>
+  <%= @application.opportunity %>
+</p>
+
+<p>
+  <strong>Employee:</strong>
+  <%= @application.employee %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @application.status %>
+</p>
+
+<p>
+  <strong>Applications description:</strong>
+  <%= @application.applications_description %>
+</p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @application.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @application.end_date %>
+</p>
+
+<%= link_to 'Edit', edit_application_path(@application) %> |
+<%= link_to 'Back', applications_path %>

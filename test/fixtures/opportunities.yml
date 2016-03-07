@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  opportunity_type: MyString
+  status: MyString
+  opporunity_description: MyText
+  start_date: 2016-03-06 20:38:38
+  end_date: 2016-03-06 20:38:38
+
+two:
+  title: MyString
+  opportunity_type: MyString
+  status: MyString
+  opporunity_description: MyText
+  start_date: 2016-03-06 20:38:38
+  end_date: 2016-03-06 20:38:38
