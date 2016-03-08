@@ -8,10 +8,53 @@
 </head>
 <body>
 
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
+  <div class="flashNotices" id="flash">
+    <% flash.each do |key, value| %>
+      <%= content_tag(:div, class: "alert alert-#{key}") do%>
+        <button type="button" class="close flashClose" data-dismiss="alert">&times;</button>
+        <%= value %>
+      <% end %>
+    <% end %>
+  </div>
 
-<%= yield %>
+  <div class="sidebarNav">
+    <% if employee_signed_in? %>
+      <div class="sidebarItem">
+        <%= link_to root_path(), :class=>"sidebarText" do %>
+          Home
+        <%end%>
+      </div>
+
+      <div class="sidebarItem">
+        <%= link_to new_company_path(), :class=>"sidebarText" do%>
+          New Company
+        <%end%>
+      </div>
+      <div class="sidebarItem">
+        <%= link_to new_opportunity_path(), :class=>"sidebarText" do%>
+          New Opportunity
+        <%end%>
+      </div>
+      <div class="sidebarItem">
+        <%= link_to new_application_path(), :class=>"sidebarText" do %>
+          New App
+        <%end%>
+      </div>
+      <%= link_to destroy_employee_session_path() do%>
+        Sign Out
+      <%end%>
+    <%else%>
+      <div class="sidebarItem">
+        <%= link_to new_employee_session_path(), :class=>"sidebarText" do%>
+          Sign In
+        <%end%>
+      </div>
+    <%end%>
+  </div>
+
+  <div class="content">
+    <%= yield %>
+  </div>
 
 </body>
 </html>

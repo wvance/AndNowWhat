@@ -14,11 +14,13 @@ class ApplicationsController < ApplicationController
 
   # GET /applications/new
   def new
+    @opportunities = Opportunity.all
     @application = Application.new
   end
 
   # GET /applications/1/edit
   def edit
+    @opportunities = Opporunity.all
   end
 
   # POST /applications

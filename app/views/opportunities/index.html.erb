@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Company</th>
       <th>Title</th>
       <th>Opportunity type</th>
       <th>Status</th>
@@ -18,6 +19,7 @@
   <tbody>
     <% @opportunities.each do |opportunity| %>
       <tr>
+        <td><%= opportunity.company %></td>
         <td><%= opportunity.title %></td>
         <td><%= opportunity.opportunity_type %></td>
         <td><%= opportunity.status %></td>

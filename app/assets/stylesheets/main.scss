@@ -1,0 +1,41 @@
+@import 'styles';
+
+body{
+  background-color:$background-light-color;
+
+  .flashNotices{
+    position:fixed;
+    top:20px;
+    right:20px;
+    z-index: 99999999;
+    width:35%;
+    .alert{
+      position:relative;
+      text-align: center;
+      background-color:$background-light-color;
+      color: white;
+    }
+    .flashClose{
+      color:white;
+    }
+  }
+
+  .sidebarNav{
+    position:fixed;
+    top:0px;
+    left:0px;
+    width:270px;
+    height:100%;
+    background-color:$secondary-color;
+    z-index: 99999;
+    .sidebarItem{
+      height:60px;
+      width:100%;
+      background-color:$primary-color;
+      color:$secondary-color;
+    }
+  }
+  .content{
+    padding-left: 290px;
+  }
+}

@@ -12,6 +12,11 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :company %><br>
+    <%= f.collection_select :company_id, @companies, :id, :name, include_blank: true %>
+  </div>
+
+  <div class="field">
     <%= f.label :title %><br>
     <%= f.text_field :title %>
   </div>

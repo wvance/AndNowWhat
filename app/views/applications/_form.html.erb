@@ -13,8 +13,9 @@
 
   <div class="field">
     <%= f.label :opportunity_id %><br>
-    <%= f.text_field :opportunity_id %>
+    <%= f.collection_select :opportunity_id, @opportunities, :id, :title, include_blank: true %>
   </div>
+
   <div class="field">
     <%= f.label :employee_id %><br>
     <%= f.text_field :employee_id %>
