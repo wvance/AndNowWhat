@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   resources :companies
 
   devise_for :employees
+
   resources :applications
   resources :opportunities
   get 'welcome/index'

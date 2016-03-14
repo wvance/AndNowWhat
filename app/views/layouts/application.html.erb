@@ -40,7 +40,7 @@
           New App
         <%end%>
       </div>
-      <%= link_to destroy_employee_session_path() do%>
+      <%= link_to destroy_employee_session_path(), :method => :delete do%>
         Sign Out
       <%end%>
     <%else%>
