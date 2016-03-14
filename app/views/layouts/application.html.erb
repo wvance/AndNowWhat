@@ -19,32 +19,34 @@
 
   <div class="sidebarNav">
     <% if employee_signed_in? %>
-      <div class="sidebarItem">
+      <div class="sidebarItem sideBarMain">
         <%= link_to root_path(), :class=>"sidebarText" do %>
           Home
         <%end%>
       </div>
 
-      <div class="sidebarItem">
+      <div class="sidebarItem sideBarMain">
         <%= link_to new_company_path(), :class=>"sidebarText" do%>
           New Company
         <%end%>
       </div>
-      <div class="sidebarItem">
+      <div class="sidebarItem sideBarMain">
         <%= link_to new_opportunity_path(), :class=>"sidebarText" do%>
           New Opportunity
         <%end%>
       </div>
-      <div class="sidebarItem">
+      <div class="sidebarItem sideBarMain">
         <%= link_to new_application_path(), :class=>"sidebarText" do %>
           New App
         <%end%>
       </div>
-      <%= link_to destroy_employee_session_path(), :method => :delete do%>
-        Sign Out
-      <%end%>
+      <div class="sidebarItem sideBarFooter">
+        <%= link_to destroy_employee_session_path(), :method => :delete, :class=>"sidebarText" do%>
+          Sign Out
+        <%end%>
+      </div>
     <%else%>
-      <div class="sidebarItem">
+      <div class="sidebarItem sideBarMain">
         <%= link_to new_employee_session_path(), :class=>"sidebarText" do%>
           Sign In
         <%end%>

@@ -19,6 +19,14 @@ body{
       color:white;
     }
   }
+  /*LINKS*/
+  a:link{
+    color:#464646;
+    text-decoration: none !important;
+  }
+  a:visited {
+    color:#464646;
+  }
 
   .sidebarNav{
     position:fixed;
@@ -31,8 +39,20 @@ body{
     .sidebarItem{
       height:60px;
       width:100%;
+      padding-top:10px;
+    }
+    .sideBarMain{
       background-color:$primary-color;
       color:$secondary-color;
+    }
+    .sideBarFooter{
+
+    }
+
+    .sidebarText{
+      font-size: 24px;
+      height:100%;
+      padding-left:10px;
     }
   }
   .content{
