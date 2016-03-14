@@ -5,7 +5,9 @@ class WelcomeController < ApplicationController
     # THESE ARE UNIQUE COMPANIES
     @companies = Company.all
 
-    @applications = Application.where(:employee_id => @employee.id)
+    if employee_signed_in?
+      @applications = Application.where(:employee_id => @employee.id)
+    end
   end
 
   private
