@@ -10,7 +10,10 @@ class DeviseCreateEmployees < ActiveRecord::Migration
       t.string :middle_name
       t.string :last_name
 
-      t.string :employee_type
+      t.string :image
+      t.string :resume_link
+
+      t.string :type
       t.string :start_date
       t.string :end_date
       t.text :employee_description

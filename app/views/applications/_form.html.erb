@@ -16,14 +16,9 @@
     <%= f.collection_select :opportunity_id, @opportunities, :id, :title, include_blank: true %>
   </div>
 
-  <!-- THIS COULD ALTERNATIVELY BE A DROPDOWN -->
-  <!-- <div class="field">
-    <%= f.label :status %><br>
-    <%= f.text_field :status %>
-  </div> -->
   <div class="field">
-    <%= f.label :applications_description %><br>
-    <%= f.text_area :applications_description %>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
   </div>
   <div class="field">
     <%= f.label :start_date %><br>

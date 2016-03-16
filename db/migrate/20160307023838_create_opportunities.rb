@@ -3,9 +3,14 @@ class CreateOpportunities < ActiveRecord::Migration
     create_table :opportunities do |t|
       t.references :company, index: true
       t.string :title
-      t.string :opportunity_type
+
+      t.string :external_url
+      t.string :image
+
+      t.string :type
       t.string :status
-      t.text :opporunity_description
+
+      t.text :description
       t.datetime :start_date
       t.datetime :end_date
 

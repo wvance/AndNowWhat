@@ -3,8 +3,13 @@ class CreateApplications < ActiveRecord::Migration
     create_table :applications do |t|
       t.references :opportunity, index: true
       t.references :employee, index: true
+
+      t.string :external_url
+      t.string :image
+
+      t.text :description
       t.string :status
-      t.text :applications_description
+
       t.datetime :start_date
       t.datetime :end_date
 

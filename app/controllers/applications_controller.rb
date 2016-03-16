@@ -20,7 +20,7 @@ class ApplicationsController < ApplicationController
 
   # GET /applications/1/edit
   def edit
-    @opportunities = Opporunity.all
+    @opportunities = Opportunity.all
   end
 
   # POST /applications
@@ -73,6 +73,6 @@ class ApplicationsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def application_params
-      params.require(:application).permit(:opportunity_id, :employee_id, :status, :applications_description, :start_date, :end_date)
+      params.require(:application).permit(:opportunity_id, :employee_id, :status, :description, :start_date, :end_date)
     end
 end

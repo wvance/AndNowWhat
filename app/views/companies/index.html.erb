@@ -16,7 +16,7 @@
     <% @companies.each do |company| %>
       <tr>
         <td><%= company.name %></td>
-        <td><%= company.company_type %></td>
+        <td><%= company.type %></td>
         <td><%= company.status %></td>
         <td><%= link_to 'Show', company %></td>
         <td><%= link_to 'Edit', edit_company_path(company) %></td>

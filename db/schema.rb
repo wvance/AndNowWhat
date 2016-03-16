@@ -19,12 +19,14 @@ ActiveRecord::Schema.define(version: 20160307024153) do
   create_table "applications", force: :cascade do |t|
     t.integer  "opportunity_id"
     t.integer  "employee_id"
+    t.string   "external_url"
+    t.string   "image"
+    t.text     "description"
     t.string   "status"
-    t.text     "applications_description"
     t.datetime "start_date"
     t.datetime "end_date"
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
   end
 
   add_index "applications", ["employee_id"], name: "index_applications_on_employee_id", using: :btree
@@ -32,7 +34,9 @@ ActiveRecord::Schema.define(version: 20160307024153) do
 
   create_table "companies", force: :cascade do |t|
     t.string   "name"
-    t.string   "company_type"
+    t.string   "type"
+    t.string   "external_url"
+    t.string   "image"
     t.string   "status"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
@@ -45,7 +49,9 @@ ActiveRecord::Schema.define(version: 20160307024153) do
     t.string   "first_name"
     t.string   "middle_name"
     t.string   "last_name"
-    t.string   "employee_type"
+    t.string   "image"
+    t.string   "resume_link"
+    t.string   "type"
     t.string   "start_date"
     t.string   "end_date"
     t.text     "employee_description"
@@ -68,13 +74,15 @@ ActiveRecord::Schema.define(version: 20160307024153) do
   create_table "opportunities", force: :cascade do |t|
     t.integer  "company_id"
     t.string   "title"
-    t.string   "opportunity_type"
+    t.string   "external_url"
+    t.string   "image"
+    t.string   "type"
     t.string   "status"
-    t.text     "opporunity_description"
+    t.text     "description"
     t.datetime "start_date"
     t.datetime "end_date"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   add_index "opportunities", ["company_id"], name: "index_opportunities_on_company_id", using: :btree

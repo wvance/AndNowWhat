@@ -1,9 +1,15 @@
 <% if employee_signed_in? %>
   <h1>Welcome to AndNowWhat? <%= current_employee.email%></h1>
-  <%= @applications.each do |application| %>
-    <%= application.applications_description %>
-    <%= application.status %>
+  <h3>Applications</h3>
+  <% @applications.each do |application| %>
+    <%= link_to application do %>
+      <%= application.applications_description %>
+      <%= application.status %>
+    <%end%>
+    <br>
   <%end%>
+  <h3>New Application</h3>
+  <h3></h3>
 <%else%>
   <h1>Please Sign In to Use AndNowWhat!</h1>
 <%end%>

@@ -2,12 +2,12 @@
 
 <p>
   <strong>Opportunity:</strong>
-  <%= @application.opportunity %>
+  <%= @application.opportunity.company.name %>: <%= @application.opportunity.title %>
 </p>
 
 <p>
   <strong>Employee:</strong>
-  <%= @application.employee %>
+  <%= @application.employee.email %>
 </p>
 
 <p>
@@ -16,8 +16,8 @@
 </p>
 
 <p>
-  <strong>Applications description:</strong>
-  <%= @application.applications_description %>
+  <strong>Description:</strong>
+  <%= @application.description %>
 </p>
 
 <p>
@@ -30,5 +30,4 @@
   <%= @application.end_date %>
 </p>
 
-<%= link_to 'Edit', edit_application_path(@application) %> |
-<%= link_to 'Back', applications_path %>
+<%= link_to 'Edit', edit_application_path(@application) %>

@@ -14,7 +14,7 @@ class OpportunitiesController < ApplicationController
 
   # GET /opportunities/new
   def new
-    @companies = Company.all
+    @companies = Company.all.order(:name)
     @opportunity = Opportunity.new
   end
 
@@ -72,6 +72,6 @@ class OpportunitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def opportunity_params
-      params.require(:opportunity).permit(:company_id, :title, :opportunity_type, :status, :opporunity_description, :start_date, :end_date)
+      params.require(:opportunity).permit(:company_id, :title, :type, :status, :description, :start_date, :end_date)
     end
 end
